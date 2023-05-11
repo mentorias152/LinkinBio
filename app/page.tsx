@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import avatar from './public/avatar.jpg'
 import fIcon from './public/facebook.svg'
 import iIcon from './public/instagram.svg'
 import gIcon from './public/github.svg'
@@ -16,7 +17,7 @@ export default function Home() {
         border-2 border-white shadow-[0_2px_8px_0_rgba(28,32,93,0.5)]'>
           <Image className='rounded-full overflow-hidden object-cover'
           fill
-          src='/avatar.jpg'
+          src={avatar}
           alt='avatar'
           />
         </div>
