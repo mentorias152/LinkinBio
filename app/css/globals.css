@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  background: url(../public/bg-ayaka-wide.jpg) repeat center center fixed;
+  background-size: cover;
+}
+
+@media (max-width: 480px) {
+  body {
+    background: url(../public/bg-phone.jpeg) repeat center center fixed;
+    background-size: cover;
+  }
+}

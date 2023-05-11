@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ul > li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fffa;
+    border-radius: 10rem;
+    padding: 1em;
+    margin: 1.4rem 0px;
+    text-align: center;
+    box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
+    font-size: large;
+    width: 50vw;
+}
+
+ul > li > a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+ul > li > a > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+@media (max-width: 480px) {
+    ul > li {
+        font-size: small;
+    }
+}
