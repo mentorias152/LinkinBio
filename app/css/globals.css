@@ -8,11 +8,6 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-body {
-  background: url(../public/bg-ayaka-wide.jpg) repeat center center fixed;
-  background-size: cover;
-}
-
 @media (max-width: 720px) {
   body {
     background: url(../public/bg-phone.jpeg) repeat center center fixed;

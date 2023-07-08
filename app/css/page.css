@@ -40,3 +40,9 @@ ul > li > a > div {
         font-size: small;
     }
 }
+
+#bg-ayaka {
+    background: url(../public/bg-ayaka-wide-small.jpg);
+    background-size: cover;
+}
+
