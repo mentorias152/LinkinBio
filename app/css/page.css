@@ -41,8 +41,17 @@ ul > li > a > div {
     }
 }
 
-#bg-ayaka {
-    background: url(../public/bg-ayaka-wide-small.jpg);
+.bg-ayaka {
+    background-image: url(../public/bg-ayaka-wide-small.jpg);
     background-size: cover;
+    background-position: center;
 }
 
+.unloaded {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+}
+
+.unloaded.loaded {
+    opacity: 1;
+}

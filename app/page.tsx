@@ -10,21 +10,43 @@ import bgAyaka from './public/bg-ayaka-wide.jpg'
 import './css/page.css'
 
 import { useForm } from '@formspree/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export default function Home() {
   const [state, handleSubmit] = useForm("mbjenldr");
 
+  useEffect(() => {
+    const img = document.querySelector('img');
+    if (img) {
+      if (img.complete) {
+        img.classList.add('loaded');
+      } else {
+        img.addEventListener('load', () => { img.classList.add('loaded') })
+      }
+    }
+    else {
+      console.log('cant find image')
+    }
+  });
+
   return (
     <main className="flex min-h-screen flex-col items-center px-4 py-12">
-        <Image id='bg-ayaka' className='
-          h-screen
-          fixed
-          top-0
-          -z-10
+      <div className='
+      bg-ayaka
+      h-screen
+      w-screen
+      fixed
+      top-0
+      -z-10
+      '>
+        <Image className='
+          unloaded
+          h-full
+          w-full
           object-cover
         '
-        src={bgAyaka} alt={'Background'}/>
+          src={bgAyaka} alt={'Background'} />
+      </div>
       <div className='flex flex-col items-center justify-between z-1'>
         <div className='flex flex-col items-center justify-center relative
          w-32 h-32 md:w-36 md:h-36 lg:w-42 lg:h-42 xl:w-42 xl:h-42
@@ -95,7 +117,7 @@ export default function Home() {
           <span className='text-xl xl:text-3xl'
           >Contact me</span>
           <form onSubmit={handleSubmit}
-          className='w-full'>
+            className='w-full'>
             <input
               id='email'
               name='message'
@@ -114,7 +136,7 @@ export default function Home() {
             />
             {state.submitting ?
               <button disabled
-              className='bg-black text-white rounded-2xl px-8 py-2 mt-4'>
+                className='bg-black text-white rounded-2xl px-8 py-2 mt-4'>
                 Submitting...
               </button> :
               <button
